@@ -8,11 +8,12 @@ html(lang='pl')
   body
     .container
       p Zaloguj się!
-      p
-        | login: 
-        input.log(type='text', name='login')
-      p
-        | hasło: 
-        input.log(type='password', name='password')
+      form(method='get', action='/auth/google')
+        p
+          | login: 
+          input.log(type='text', name='login')
+        p
+          | hasło: 
+          input.log(type='password', name='password')
       form(method='get', action='/auth/google')
         button.button(type='submit') Logowanie
