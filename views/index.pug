@@ -1,0 +1,18 @@
+doctype html
+html(lang='pl')
+  head
+    meta(charset='UTF-8')
+    title Node Hello world example
+    style
+      include ../style.css
+  body
+    .container
+      p Zaloguj się!
+      p
+        | login: 
+        input.log(type='text', name='login')
+      p
+        | hasło: 
+        input.log(type='password', name='password')
+      form(method='get', action='/auth/google')
+        button.button(type='submit') Logowanie
