@@ -9,11 +9,10 @@ app.get("/", function(req, res) {
 });
 
 app.get("/auth/google", function(req, res) {
-  res.render("loginsite");
   const response = {
     login: req.query.login
   };
-  res.end(JSON.stringify(response));
+  res.render("loginsite", response);
 });
 
 app.listen(3000);
